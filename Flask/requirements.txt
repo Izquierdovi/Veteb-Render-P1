@@ -12,5 +12,5 @@ torch==2.2.2
 google
 google-generativeai==0.8.5
 langchain==0.3.26
-huggingface_hub==0.16.4
+huggingface_hub
 gunicorn

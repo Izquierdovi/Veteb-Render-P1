@@ -18,6 +18,8 @@ RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Precargar el modelo para que no se descargue en producción
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2')"
+
 # Puerto en el que correrá Gunicorn
 EXPOSE 10000
 
