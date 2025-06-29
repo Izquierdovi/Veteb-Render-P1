@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, rgba(36, 130, 50, 1) 43%, rgba(43, 168, 74, 1) 100%);   
+    color: #fffffc;
+    min-width: 950px;
+    overflow-x: auto;
+    height: 100vh;
+}
+
+.header_nav_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 0.1px solid #b6b4b4;
+}
+
+.header h3{
+    padding-top: 10px;
+}
+
+nav{
+    flex: 1;
+    font-size: .8em;
+}
+
+nav.menu ul{
+    display: flex;
+    list-style: none;
+    padding-left: 1em;
+    gap: 3em;
+}
+
+nav.menu ul li a{
+    text-decoration: None;
+    color: #D9D9D9;
+    font-size: 1.3em;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font: 1.5em;
+    color: white;
+}
+
+.header_nav_menu h4{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+nav ul li a:hover{
+    color: #98CE00
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+}
+
+h3{
+    margin-top: 0;
+}
+
+
+
+
+.disclaimer_content{
+    background-color: #fffffc;
+    color : #248232;
+    text-align: center;
+    border-radius: 40px;
+    width: 70vw;
+    padding: 1em
+
+    
+}
+
+.disclaimer_content h3{
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+div h3{
+    text-align: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+}
+
+
+.files_main_content{
+    display: flex;
+    justify-content: center;
+}
+
+.files_content{
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+    
+}
+
+.files_datasheet, .files_requeriments{
+    background-color: white;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 30px;
+    padding: 0;
+    width: calc(100vw / 3);
+    height: calc(100vh / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffffc;
+}
+
+.files_datasheet_dashed, .files_requeriments_dashed{
+    height: 60%;
+    width: 90%;
+    margin-top: 3vh;
+    border-radius: 30px;
+    border: 2px dashed #D9D9D9;
+
+}
+
+.files_requeriments_btn, .files_datasheet_btn{
+    width: 41%;
+    height: 14%;
+    
+    background-image: linear-gradient(to right,rgba(11, 86, 64, 1) 0%, rgba(6, 132, 67, 1) 67%, rgba(3, 168, 69, 1) 100%);
+    background-size: 200% 100%;
+    
+    border-radius: 50px;
+    border: none;
+    margin: 2em;
+    color: #fffffc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    text-align: center;
+    padding: 0.7em;
+    transition: 0.5s;
+}
+
+.files_requeriments_btn:hover, .files_datasheet_btn:hover{
+    transition: 0.5s;
+    background-position: right center;
+}
+
+#fileInput, #requerimentInput{
+    display: none;
+}
+
+.start_content{
+    display: flex;
+    justify-content: center;
+}
+
+.start_btn{
+    height: calc(100vh / 14);
+    width: 35vw;
+    border-radius: 50px;
+    background-color: #fffffc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 2em;
+    letter-spacing: 2px;
+    border: none;
+    color: #248232;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    text-align: center;
+    padding: 0.4em;
+}
+
+
+span{
+    color: #b6b4b4;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 9em;
+    text-align: center;
+}

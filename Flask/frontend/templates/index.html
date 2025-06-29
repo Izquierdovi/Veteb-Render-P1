@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>VETEB - Gobernación de Antioquía</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header_nav_menu">
+            <nav class="menu">
+                <ul>
+                    <li><a href=""><b>Inicio</b></a></li>
+                    <li><a href="">Formato</a></li>
+                    <li><a href="">Tutorial</a></li>
+                    <li><a href="">Guía</a></li>
+                </ul>
+            </nav>
+            <h1 class="logo">VETEB</h1>
+            <h4>Gobernación de Antioquia</h4>
+        </div>
+        <h3>Verificación de Especificaciones Técnicas de Equipos Biomédicos</h3>
+
+    </div>
+    
+    <div class="parent">
+        <div class = "disclaimer_content">
+            <h3 >¡ADVERTENCIA!</h3>
+            <p>
+                Este software <b>no reemplaza en ningún caso el criterio ni el conocimiento técnico de un Ingeniero Biomédico.</b> Su propósito es <b>agilizar la primera revisión</b> , pero <b>los resultados deben ser validados siempre por un profesional calificado.</b> Se recomienda realizar una verificación posterior para confirmar el análisis obtenido. No confíe ciegamente en los resultados automáticos; utilícelos como apoyo, no como diagnóstico definitivo.
+            </p>
+    
+        </div>
+    
+    </div>
+
+    <div class = 'files_main_content'>
+        <div class="files_content">
+            <div class="files_datasheet">
+                <div class="files_datasheet_dashed"></div>
+                <input type="file" id="fileInput" /> 
+                <a class="files_datasheet_btn" id="uploadDatasheet">Ficha Técnica</a>
+                <span id="fileNameDS">No se ha seleccionado ningún archivo</span>
+                
+            </div>
+
+            <div class="files_requeriments">
+                <div class="files_requeriments_dashed"></div>
+                <input type="file" id="requerimentInput">
+                <a class="files_requeriments_btn" id="uploadRequeriments"> Requisitos</a>
+                <span id="fileNameRequeriments">No se ha seleccionado ningún archivo</span>
+
+            </div>
+        </div>
+
+       
+    </div>
+    <div class="start_content">
+        <a class="start_btn" id="sendFilesBtn">Empezar Chequeo</a>
+
+    </div>
+    
+
+
+    <div class="footer">
+        <footer>
+             <b>© 2025 VETEB.</b> Todos los derechos reservados. <br>
+             <b>Author: </b> Daniel Izquierdo Villarraga <br>
+             <b>Technical Support:</b> daniel.izquierdo8@hotmail.com
+
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+</body>
+</html>
