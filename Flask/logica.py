@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
-os.environ['TRANSFORMERS_CACHE'] = '/tmp/transformers_cache'
+os.environ['SENTENCE_TRANSFORMERS_HOME'] = '/root/.cache/sentence_transformers'
 from sentence_transformers import SentenceTransformer
 import pdfplumber
 import time
@@ -84,7 +84,7 @@ def get_model():
     if _model is None:
         print("Cargando modelo...")
         
-        _model = SentenceTransformer('all-MiniLM-L6-v2')
+        _model = SentenceTransformer('all-MiniLM-L6-v2', device = 'cpu')
     
     return _model
 
