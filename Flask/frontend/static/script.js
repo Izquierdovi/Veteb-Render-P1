@@ -101,7 +101,15 @@ uploadButton.addEventListener('click', async() =>{
 
 
         //Enviar los archivos al backend usando fetch
-        const response = await fetch('/upload', {
+
+        // Detectar si estamos en render o en local
+    
+        const backendUrl = window.location.hostname.includes('render.com')
+            ? 'https://veteb-p2.onrender.com'
+            : '';
+        
+
+        const response = await fetch(`${backendUrl}/upload`, {
             method : 'POST',
             body : formData
         });
