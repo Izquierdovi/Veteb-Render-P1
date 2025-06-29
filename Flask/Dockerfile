@@ -5,7 +5,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Copiar todo el proyecto a la imagen
-COPY . /app
+COPY Flask/ /app
 
 # Instalar dependencias del sistema necesarias
 RUN apt-get update && apt-get install -y \
