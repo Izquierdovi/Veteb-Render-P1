@@ -4,13 +4,14 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+import os
+os.environ['TRANSFORMERS_CACHE'] = '/tmp/transformers_cache'
 from sentence_transformers import SentenceTransformer
 import pdfplumber
 import time
 import google.generativeai as genai
 import re
 import ast
-import os
 from io import BytesIO
 
 #Extraccion texto del pdf
@@ -169,7 +170,9 @@ def output(path:str, list_output:list):
 
 ################## MODELO DE GOOGLE ##################
 # Configuración de la API
-genai.configure(api_key="AIzaSyCrg4rqN__GDI6c8YWmxhLIqKLBOtTke2c")
+
+api_key = os.getenv('GOOGLE_API_KEY')
+genai.configure(api_key=api_key)
 
 instrucciones = (
     "Eres un agente virtual que evalúa si un requisito técnico se cumple o no según una lista de evidencias. "
@@ -232,3 +235,6 @@ def evaluar_bloques(df_to_api, excel_path):
     
 
     return output(excel_path, respuestas_dict.values())
+
+
+get_model()
